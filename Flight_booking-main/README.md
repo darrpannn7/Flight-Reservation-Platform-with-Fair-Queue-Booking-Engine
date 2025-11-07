@@ -1,100 +1,80 @@
-# Flight Booking System with Queue Management
+# Flight Reservation Platform with Fair-Queue Booking Engine
 
-Welcome to the Flight Booking System project! This web application focuses on providing a simple and efficient way to search and book flights through a user-friendly interface. It introduces a queue-based backend system to handle booking requests fairly and reliably. Below you'll find detailed information on how to set up, use, and contribute to this project.
+A **full-stack flight discovery and reservation system** that ensures **fair, race-free seat allocation** using a **queue-based booking engine**. Built with the **MERN stack**, this project demonstrates scalable architecture, secure authentication, and real-time concurrency control.
 
-## Table of Contents
+![Flight Booking Demo](https://via.placeholder.com/1200x600.png?text=Flight+Reservation+Platform+Live+Demo)  
+**Live Demo:** [https://your-flight-app.netlify.app](https://your-flight-app.netlify.app)  
+**GitHub Repo:** [https://github.com/your-username/flight-reservation-platform](https://github.com/your-username/flight-reservation-platform)
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Demo](#demo)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+---
 
-## Introduction
+## ✨ Key Features
 
-In the fast-paced digital age, the Flight Booking System provides a modern and minimal solution to traditional ticketing systems. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js), this application allows users to search for and book flights efficiently. A key enhancement is the integration of a **queue mechanism** to ensure fair processing of booking requests, especially under load.
+- **Secure User Authentication** – JWT-based registration & login with protected routes  
+- **Smart Flight Search** – Filter by origin, destination, and departure date  
+- **Fair-Queue Booking System** – Serializes concurrent bookings to prevent overbooking  
+- **User Dashboard** – View and manage all confirmed flight reservations  
+- **Responsive Design** – Mobile-first UI with React + Tailwind CSS (optional)  
+- **Modular MERN Architecture** – Clean separation of frontend and backend
 
-## Features
+> **Focus:** Core booking logic only. No payment, QR codes, or admin panel — keeps the system lightweight and educational.
 
-- **User Authentication**: Register and log in securely.
-- **Flight Search and Booking**: Search for flights based on source, destination, and date, and book them using a queue-backed system.
-- **Queue-Based Booking**: Ensures orderly and conflict-free ticket processing under simultaneous user requests.
-- **Responsive Design**: Offers a consistent experience across desktops, laptops, tablets, and smartphones.
+---
 
-> ✨ Note: QR code verification, admin panel, and payment integration have been removed in this version for simplicity and to focus solely on the booking system.
+## 🛠 Tech Stack
 
-## Demo
+| Layer      | Technology                          |
+|-----------|-------------------------------------|
+| Frontend  | React.js, Vite, Context API         |
+| Backend   | Node.js, Express.js                 |
+| Database  | MongoDB (Mongoose ODM)              |
+| Auth      | JSON Web Tokens (JWT)               |
+| Queue     | In-memory queue with persistence    |
+| Styling   | CSS Modules / Tailwind (optional)   |
 
-Check out the live demo of the Flight Booking System [here](https://abvssystem.web.app/).
+---
 
-## Installation
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/PiyushPb/Airplane-Ticket-Booking.git
-```
-
-2. Navigate to the project directory:
+## 🚀 Full Installation & Run Commands
 
 ```bash
-cd airplane-ticket-booking
-```
+# 1. Clone your repository
+git clone https://github.com/your-username/flight-reservation-platform.git
+cd flight-reservation-platform
 
-3. There are 2 directories: `frontend` and `backend`.
-
-For frontend:
-
-```bash
-cd frontend
-npm install
-```
-
-For backend:
-
-```bash
+# 2. Install backend dependencies
 cd backend
 npm install
-```
 
-4. Set up environment variables:
-   - Create a `.env` file inside the `backend` directory.
-   - Add environment variables for MongoDB connection and JWT token:
+# 3. Install frontend dependencies
+cd ../frontend
+npm install
 
-```env
-MONGO_URL=<your-mongodb-uri>
-JWT_TOKEN=<your-jwt-secret>
-```
+# 4. Set up environment variables (backend)
+cd ../backend
+cp .env.example .env
 
-5. Start the development server:
-
-For backend:
-
-```bash
+Start Both Servers
+Terminal 1 – Backend
+cd backend
 npm run dev
-```
 
-For frontend (in a separate terminal):
+Server runs on: http://localhost:5000
 
-```bash
+Terminal 2 – Frontend
+cd frontend
 npm run dev
+
+App runs on: http://localhost:5173
 ```
+How to Use
 
-6. Open your browser and visit `http://localhost:5173` to access the application.
-
-## Usage
-
-Once the application is running, users can:
-
-- Register or log in to their accounts.
-- Search for flights based on source, destination, and date.
-- Book tickets using the queue system to handle concurrent requests fairly.
-- View their booked flights through the user dashboard.
+Open http://localhost:5173
+.Register a new account or log in
+.Use Search Flights to find available routes
+.Click "Book Now" — your request enters the fair queue
+.Receive instant confirmation when seat is reserved
+.Go to My Flights to view all bookings
 
 
-
+Multiple users booking the same seat? Only one wins — fairly and transparently.
 
