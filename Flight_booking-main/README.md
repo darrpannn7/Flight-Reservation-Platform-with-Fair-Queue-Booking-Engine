@@ -12,7 +12,7 @@ A **full-stack flight discovery and reservation system** that ensures **fair, ra
 - **Responsive Design** – Mobile-first UI with React + Tailwind CSS (optional)  
 - **Modular MERN Architecture** – Clean separation of frontend and backend
 
-> **Focus:** Core booking logic only. No payment, QR codes, or admin panel — keeps the system lightweight and educational.
+
 
 ---
 
