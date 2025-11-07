@@ -2,11 +2,6 @@
 
 A **full-stack flight discovery and reservation system** that ensures **fair, race-free seat allocation** using a **queue-based booking engine**. Built with the **MERN stack**, this project demonstrates scalable architecture, secure authentication, and real-time concurrency control.
 
-![Flight Booking Demo](https://via.placeholder.com/1200x600.png?text=Flight+Reservation+Platform+Live+Demo)  
-**Live Demo:** [https://your-flight-app.netlify.app](https://your-flight-app.netlify.app)  
-**GitHub Repo:** [https://github.com/your-username/flight-reservation-platform](https://github.com/your-username/flight-reservation-platform)
-
----
 
 ## ✨ Key Features
 
